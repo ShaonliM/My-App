@@ -17,7 +17,7 @@ import {constants} from './data/zip-codes';
 // import {useOrientation} from '@/hooks/use-orientation';
 import {sizeHeight, sizeWidth} from './config/size';
 import ErrorText from './components/ErrorText';
-import {COLORS_PALETTE, FONT_FAMILY, FONT_SIZE} from './config/app-style';
+import {COLORS_PALETTE, FONT_FAMILY} from './config/app-style';
 import {RadioButton} from 'react-native-paper';
 import SelectDropdown from 'react-native-select-dropdown';
 import {formatNumber} from './helper/common';
@@ -652,7 +652,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: sizeHeight(4),
     textTransform: 'uppercase',
     fontFamily: FONT_FAMILY.APP_FONT_FAMILY,
-    fontSize: FONT_SIZE.NAVIGATION_HEADER_TITLE_SIZE,
     color: COLORS_PALETTE.BLACK,
     fontWeight: 'bold',
   },
@@ -700,7 +699,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   dateSeperator: {
-    // fontSize: FONT_SIZE.TEXT_HEADING_H3_SIZE,
     fontWeight: '400',
     paddingBottom: sizeHeight(0.5),
     color: COLORS_PALETTE.BLACK,
