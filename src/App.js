@@ -384,6 +384,7 @@ function App({navigation, route}) {
                         style={{
                           minWidth: sizeHeight(2),
                           height: sizeHeight(6),
+                          color: COLORS_PALETTE.BLACK,
                         }}
                         onChangeText={text => setFieldValue('dd', text)}
                         name="dd"
@@ -401,6 +402,7 @@ function App({navigation, route}) {
                         style={{
                           minWidth: sizeHeight(1),
                           height: sizeHeight(6),
+                          color: COLORS_PALETTE.BLACK,
                         }}
                         onChangeText={text => setFieldValue('mm', text)}
                         name="mm"
@@ -418,6 +420,7 @@ function App({navigation, route}) {
                         style={{
                           minWidth: sizeHeight(5),
                           height: sizeHeight(6),
+                          color: COLORS_PALETTE.BLACK,
                         }}
                         onChangeText={text => setFieldValue('yyyy', text)}
                         name="yyyy"
@@ -466,14 +469,27 @@ function App({navigation, route}) {
                         onPress={() => setChecked('male')} //when pressed, set the value of the checked Hook to 'Apple'
                         disabled={isSubmitted}
                       />
-                      <Text style={{marginRight: sizeHeight(10)}}> Male</Text>
+                      <Text
+                        style={{
+                          marginRight: sizeHeight(10),
+                          color: COLORS_PALETTE.BLACK,
+                        }}>
+                        {' '}
+                        Male
+                      </Text>
                       <RadioButton
                         value="female"
                         status={checked === 'female' ? 'checked' : 'unchecked'}
                         onPress={() => setChecked('female')}
                         disabled={isSubmitted}
                       />
-                      <Text style={{marginRight: sizeHeight(10)}}> Female</Text>
+                      <Text
+                        style={{
+                          marginRight: sizeHeight(10),
+                          color: COLORS_PALETTE.BLACK,
+                        }}>
+                        Female
+                      </Text>
                     </View>
                   </View>
                   <View style={styles.fieldContainer}>
@@ -539,7 +555,7 @@ function App({navigation, route}) {
                 {/* {showDataPressed && formValues ? ( */}
                 {showDataPressed && formValues && (
                   <View style={styles.showTextInputContainer}>
-                    <Text>
+                    <Text style={{color: COLORS_PALETTE.BLACK}}>
                       {` COUNT: ${showDataCount} \n\nNAME : ${formValues?.name} \n\nEMAIL : ${formValues?.email} \n\nMOBILE PHONE : ${formValues?.mobilePhone} \n\nDOB : ${formValues.dd} - ${formValues.mm} - ${formValues.yyyy} \n\nGENDER : ${savedValues.gender} \n\nZIP : ${formValues.zipCode} \n\nCITY : ${formValues.city} \n\nSTATE : ${formValues.state}`}
                     </Text>
                   </View>
@@ -567,7 +583,7 @@ function App({navigation, route}) {
                       setChecked('male');
                       console.log(formValues);
                     }}>
-                    <Text>Reset</Text>
+                    <Text style={{color: COLORS_PALETTE.BLACK}}>Reset</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={[
@@ -590,7 +606,7 @@ function App({navigation, route}) {
                     onPress={() => {
                       handleSubmit();
                     }}>
-                    <Text>Submit</Text>
+                    <Text style={{color: COLORS_PALETTE.BLACK}}>Submit</Text>
                     {isSubmitting && <ActivityIndicator />}
                   </TouchableOpacity>
                   <TouchableOpacity
@@ -612,7 +628,7 @@ function App({navigation, route}) {
                       setShowDataPressed(true);
                       setShowDataCount(showDataCount + 1);
                     }}>
-                    <Text>Show Data</Text>
+                    <Text style={{color: COLORS_PALETTE.BLACK}}>Show Data</Text>
                   </TouchableOpacity>
                 </View>
               </>
@@ -665,6 +681,7 @@ const styles = StyleSheet.create({
   },
   textInputContainer: {
     backgroundColor: COLORS_PALETTE.BEIGE,
+    color: COLORS_PALETTE.BLACK,
     width: '100%',
     height: sizeHeight(6),
     alignSelf: 'center',
@@ -686,6 +703,7 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE.TEXT_HEADING_H3_SIZE,
     fontWeight: '400',
     paddingBottom: sizeHeight(0.5),
+    color: COLORS_PALETTE.BLACK,
   },
   buttonsContainer: {
     flex: 1,
