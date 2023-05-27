@@ -700,7 +700,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   dateSeperator: {
-    fontSize: FONT_SIZE.TEXT_HEADING_H3_SIZE,
+    // fontSize: FONT_SIZE.TEXT_HEADING_H3_SIZE,
     fontWeight: '400',
     paddingBottom: sizeHeight(0.5),
     color: COLORS_PALETTE.BLACK,
